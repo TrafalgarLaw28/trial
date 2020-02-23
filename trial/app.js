@@ -11,3 +11,6 @@
 // console.log("yooo");
 // console.log(__dirname); 
 // console.log(__filename);
+var counter = require('./stuff');
+
+console.log(counter(['shaun','crystal','ryu']));
