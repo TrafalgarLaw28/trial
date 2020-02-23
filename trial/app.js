@@ -11,6 +11,18 @@
 // console.log("yooo");
 // console.log(__dirname); 
 // console.log(__filename);
-var counter = require('./stuff');
+// var stuff = require('./stuff');
+var e = require('events');
 
-console.log(counter(['shaun','crystal','ryu']));
+// console.log(stuff.counter(['shaun','crystal','ryu']));
+// console.log(stuff.adder(10,5));
+// console.log(stuff.pi);
+
+// var myEmitter = new e.EventEmitter();
+
+// myEmitter.on('someEvent',function(msg){
+//     console.log(msg);
+// });
+
+// myEmitter.emit('someEvent','the event was emitted');
+

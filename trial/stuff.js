@@ -8,4 +8,8 @@ var adder = function(a,b){
 
 var pi = 3.1415;
 
-module.exports = counter;
+module.exports={
+    counter: counter,
+    adder: adder,
+    pi: pi
+};
