@@ -26,3 +26,22 @@ var e = require('events');
 
 // myEmitter.emit('someEvent','the event was emitted');
 
+var u = require('util');
+var P = function(name){
+    this.name = name;
+};
+
+u.inherits(P,e.EventEmitter);
+
+var james = new P('james');
+var mary = new P('mary');
+var ryu = new P('ryu');
+var people = [james,mary,ryu]
+
+people.forEach(function(P){
+    P.on('speak',function(msg){
+        console.log(P.name+' says: '+msg);
+    });
+});
+james.emit('speak','hey dudes');
+
