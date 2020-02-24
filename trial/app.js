@@ -12,7 +12,7 @@
 // console.log(__dirname); 
 // console.log(__filename);
 // var stuff = require('./stuff');
-var e = require('events');
+// var e = require('events');
 
 // console.log(stuff.counter(['shaun','crystal','ryu']));
 // console.log(stuff.adder(10,5));
@@ -26,22 +26,27 @@ var e = require('events');
 
 // myEmitter.emit('someEvent','the event was emitted');
 
-var u = require('util');
-var P = function(name){
-    this.name = name;
-};
+// var u = require('util');
+// var P = function(name){
+//     this.name = name;
+// };
 
-u.inherits(P,e.EventEmitter);
+// u.inherits(P,e.EventEmitter);
 
-var james = new P('james');
-var mary = new P('mary');
-var ryu = new P('ryu');
-var people = [james,mary,ryu]
+// var james = new P('james');
+// var mary = new P('mary');
+// var ryu = new P('ryu');
+// var people = [james,mary,ryu]
 
-people.forEach(function(P){
-    P.on('speak',function(msg){
-        console.log(P.name+' says: '+msg);
-    });
-});
-james.emit('speak','hey dudes');
+// people.forEach(function(P){
+//     P.on('speak',function(msg){
+//         console.log(P.name+' says: '+msg);
+//     });
+// });
+// james.emit('speak','hey dudes');
+// ryu.emit('speak','I want curry');
+var fs = require('fs');
 
+var r = fs.readFileSync('readme.txt','utf8');
+console.log(r);
+var o  = fs.writeFileSync('a.txt',r);
